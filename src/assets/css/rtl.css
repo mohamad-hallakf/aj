@@ -1,0 +1,60 @@
+  [dir='rtl'] {
+  text-align: right;
+  font-weight: bold;
+}
+
+[dir='rtl'] .nav__btns {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .home__btns {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .cart__prices {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .d-flex {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .pagination {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .footer .row {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .language-switcher {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+/* Fix for Bootstrap components in RTL */
+[dir='rtl'] .form-control,
+[dir='rtl'] .form-select {
+  text-align: right;
+}
+
+[dir='rtl'] .btn {
+  text-align: center;
+}
+
+/* Navigation adjustments for RTL */
+[dir='rtl'] .nav__toggle {
+  order: -1;
+}
+
+[dir='rtl'] .footer-col h4::before {
+  right: 0;
+}
+[dir='rtl'] .nav__list {
+  direction: rtl;
+}
+
+[dir='rtl'] .footer-col .social-links a {
+  margin: 0 0 10px 10px;
+}
+

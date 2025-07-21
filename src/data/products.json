@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "Lingerie Product 1",
+    "price": 25,
+    "img": "new1.png",
+    "tag": "New",
+    "gallery": ["new1.png", "new2.png", "new3.png"],
+    "category": {"id": 1, "name": "Bras"}
+  },
+  {
+    "id": 2,
+    "name": "Lingerie Product 2",
+    "price": 30,
+    "img": "new2.png",
+    "tag": "Hot",
+    "gallery": ["new2.png", "new3.png", "new4.png"],
+    "category": {"id": 2, "name": "Panties"}
+  },
+  {
+    "id": 3,
+    "name": "Lingerie Product 3",
+    "price": 28,
+    "img": "new3.png",
+    "tag": "Sale",
+    "gallery": ["new3.png", "new4.png", "new1.png"],
+    "category": {"id": 3, "name": "Lace Sets"}
+  },
+  {
+    "id": 4,
+    "name": "Lingerie Product 4",
+    "price": 35,
+    "img": "new4.png",
+    "tag": "New",
+    "gallery": ["new4.png", "new1.png", "new2.png"],
+    "category": {"id": 4, "name": "Bodysuits"}
+  },
+  {
+    "id": 5,
+    "name": "Lingerie Product 5",
+    "price": 32,
+    "img": "new1.png",
+    "tag": "Hot",
+    "gallery": ["new1.png", "new2.png", "new3.png"],
+    "category": {"id": 5, "name": "Babydolls"}
+  },
+  {
+    "id": 6,
+    "name": "Lingerie Product 6",
+    "price": 27,
+    "img": "new2.png",
+    "tag": "Sale",
+    "gallery": ["new2.png", "new3.png", "new4.png"],
+    "category": {"id": 6, "name": "Chemises"}
+  },
+  {
+    "id": 7,
+    "name": "Lingerie Product 7",
+    "price": 40,
+    "img": "new3.png",
+    "tag": "New",
+    "gallery": ["new3.png", "new4.png", "new1.png"],
+    "category": {"id": 7, "name": "Corsets"}
+  },
+  {
+    "id": 8,
+    "name": "Lingerie Product 8",
+    "price": 38,
+    "img": "new4.png",
+    "tag": "Hot",
+    "gallery": ["new4.png", "new1.png", "new2.png"],
+    "category": {"id": 8, "name": "Garter Belts"}
+  },
+  {
+    "id": 9,
+    "name": "Lingerie Product 9",
+    "price": 29,
+    "img": "new1.png",
+    "tag": "Sale",
+    "gallery": ["new1.png", "new2.png", "new3.png"],
+    "category": {"id": 9, "name": "Teddies"}
+  },
+  {
+    "id": 10,
+    "name": "Lingerie Product 10",
+    "price": 33,
+    "img": "new2.png",
+    "tag": "New",
+    "gallery": ["new2.png", "new3.png", "new4.png"],
+    "category": {"id": 10, "name": "Robes"}
+  }
+  
+]

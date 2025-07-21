@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "categories": "الفئات",
+    "products": "المنتجات",
+    "locations": "المواقع"
+  },
+  "home": {
+    "title": "أي جي للملابس الداخلية",
+    "description": "أحدث وصول للساعات المستوردة الجديدة من سلسلة B720، بتصميم عصري ومقاوم.",
+    "discover": "اكتشف",
+    "contactWhatsapp": "تواصل معنا عبر الواتساب",
+    "newArrivals": "الوافدون الجدد",
+    "categories": "الفئات",
+    "locations": "المواقع",
+    "saifAldollah": "سيف الدولة",
+    "alTelall": "التلال",
+    "loc1": "الموقع الأول",
+    "loc2": "الموقع الثاني",
+    "inspirationalWatch": "ساعة ملهمة لهذا العام",
+    "watchDescription": "أحدث الساعات العصرية لهذا العام، متوفرة بعروض مختلفة في هذا المتجر، اكتشفها الآن."
+  },
+  "products": {
+    "search": "البحث",
+    "searchPlaceholder": "البحث عن المنتجات...",
+    "category": "الفئة",
+    "allCategories": "جميع الفئات",
+    "priceRange": "نطاق السعر",
+    "min": "الحد الأدنى",
+    "max": "الحد الأقصى",
+    "previous": "السابق",
+    "next": "التالي"
+  },
+  "cart": {
+    "myCart": "سلة التسوق",
+    "items": "عناصر",
+    "checkout": "الدفع",
+    "noItems": "لا توجد عناصر في السلة"
+  },
+  "checkout": {
+    "personalDetails": "البيانات الشخصية",
+    "cartProducts": "منتجات السلة",
+    "checkoutComplete": "اكتمال الدفع",
+    "firstName": "الاسم الأول",
+    "address": "العنوان",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "priceQuantity": "السعر × الكمية",
+    "product": "المنتج",
+    "total": "المجموع",
+    "customerName": "اسم العميل",
+    "itemsCount": "عدد العناصر"
+  },
+  "footer": {
+    "company": "الشركة",
+    "aboutUs": "من نحن",
+    "ourServices": "خدماتنا",
+    "privacyPolicy": "سياسة الخصوصية",
+    "affiliateProgram": "برنامج الشراكة",
+    "getHelp": "احصل على المساعدة",
+    "faq": "الأسئلة الشائعة",
+    "shipping": "الشحن",
+    "returns": "المرتجعات",
+    "orderStatus": "حالة الطلب",
+    "paymentOptions": "خيارات الدفع",
+    "onlineShop": "المتجر الإلكتروني",
+    "watch": "ساعة",
+    "bag": "حقيبة",
+    "shoes": "أحذية",
+    "dress": "فستان",
+    "followUs": "تابعنا"
+  },
+  "quickActions": {
+    "callUs": "اتصل بنا",
+    "searchPlaceholder": "البحث..."
+  },
+  "common": {
+    "facebook": "فيسبوك",
+    "whatsapp": "واتساب",
+    "instagram": "إنستغرام"
+  }
+}

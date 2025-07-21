@@ -1,0 +1,12 @@
+[
+  {"id": 1, "img":"lingerie.png","name": "Bras"},
+  {"id": 2, "img":"featured1.png","name": "Panties"},
+  {"id": 3, "img":"featured2.png","name": "Lace Sets"},
+  {"id": 4, "img":"featured2.png","name": "Bodysuits"},
+  {"id": 5, "img":"featured1.png","name": "Babydolls"},
+  {"id": 6, "img":"featured1.png","name": "Chemises"},
+  {"id": 7, "img":"featured2.png","name": "Corsets"},
+  {"id": 8, "img":"featured1.png","name": "Garter Belts"},
+  {"id": 9, "img":"featured2.png","name": "Teddies"},
+  {"id": 10,"img":"featured1.png", "name": "Robes"}
+]

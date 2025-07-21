@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "products": "Products",
+    "locations": "Locations"
+  },
+  "home": {
+    "title": "Aj lingerie",
+    "description": "Latest arrival of the new imported watches of the B720 series, with a modern and resistant design.",
+    "discover": "Discover",
+    "contactWhatsapp": "Contact Us on WhatsApp",
+    "newArrivals": "New Arrivals",
+    "categories": "categories",
+    "locations": "Locations",
+    "saifAldollah": "Saif aldollah",
+    "alTelall": "Al telall",
+    "loc1": "loc1",
+    "loc2": "loc2",
+    "inspirationalWatch": "Inspirational Watch of this year",
+    "watchDescription": "The latest and modern watches of this year, is available in various presentations in this store, discover them now."
+  },
+  "products": {
+    "search": "Search",
+    "searchPlaceholder": "Search products...",
+    "category": "Category",
+    "allCategories": "All Categories",
+    "priceRange": "Price Range",
+    "min": "Min",
+    "max": "Max",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "cart": {
+    "myCart": "My Cart",
+    "items": "items",
+    "checkout": "Checkout",
+    "noItems": "No items in cart"
+  },
+  "checkout": {
+    "personalDetails": "Personal Details",
+    "cartProducts": "Cart Products",
+    "checkoutComplete": "Checkout Complete",
+    "firstName": "First Name",
+    "address": "Address",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "priceQuantity": "price X quantity",
+    "product": "Product",
+    "total": "total",
+    "customerName": "Customer Name",
+    "itemsCount": "items count"
+  },
+  "footer": {
+    "company": "company",
+    "aboutUs": "about us",
+    "ourServices": "our services",
+    "privacyPolicy": "privacy policy",
+    "affiliateProgram": "affiliate program",
+    "getHelp": "get help",
+    "faq": "FAQ",
+    "shipping": "shipping",
+    "returns": "returns",
+    "orderStatus": "order status",
+    "paymentOptions": "payment options",
+    "onlineShop": "online shop",
+    "watch": "watch",
+    "bag": "bag",
+    "shoes": "shoes",
+    "dress": "dress",
+    "followUs": "follow us"
+  },
+  "quickActions": {
+    "callUs": "Call Us",
+    "searchPlaceholder": "search..."
+  },
+  "common": {
+    "facebook": "Facebook",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram"
+  }
+}
