@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{ name: 'Products', query: { categoryId: category.id } }">
+  <router-link :to="{ name: 'Products', query: { categoryId: category.name } }">
     <article class="categories__card">
       <img :src="getImage(category.img)" :alt="category.name" class="categories__img">
       <h3 class="categories__title">{{ category.name }}</h3>

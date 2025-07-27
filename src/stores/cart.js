@@ -22,16 +22,15 @@ export const useCartStore = defineStore('cart', {
 
       if (existingItem) {
         existingItem.quantity += item.quantity || 1;
+        toast.warning('المنتج موجود في السلة');
       } else {
         const serializableItem = {
           ...item,
           quantity: item.quantity ?? 1,
         };
         this.items.push(serializableItem);
+        toast.success('تم اضافة المنتج الى السلة بنجاح');
       }
-              toast.success('Operation completed successfully!');
-
-
     },
 
     removeItem(itemId) {

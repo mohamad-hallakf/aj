@@ -40,15 +40,25 @@
               </div>
             </div>
 
-            <input type="button" @click="prevStep" class="previous action-button-previous" :value="$t('checkout.previous')" />
+            <input type="button" @click="prevStep" class="previous action-button-previous"
+              :value="$t('checkout.previous')" />
             <input type="button" @click="nextStep" class="next action-button" :value="$t('checkout.next')" />
           </fieldset>
 
           <fieldset v-if="currentStepIndex === 2" key="step3">
-            <h2 class="fs-title">{{ $t('checkout.checkoutComplete') }}</h2>
 
-            <input type="button" @click="prevStep" class="previous action-button-previous" :value="$t('checkout.previous')" />
-            <input type="submit" @click.prevent="submitForm" class="submit action-button" :value="$t('checkout.submit')" />
+            <h2 class="fs-title">{{ $t('checkout.checkoutComplete') }}</h2>
+            <div class="form-check">
+              <input v-model="isCheckedDelivery" class="form-check-input" type="checkbox" value="" id="myCheckbox">
+
+              <label class="form-check-label" for="myCheckbox">
+                {{ $t('checkout.needDelivery') }} </label>
+
+            </div>
+            <input type="button" @click="prevStep" class="previous action-button-previous"
+              :value="$t('checkout.previous')" />
+            <input type="submit" @click.prevent="submitForm" class="submit action-button"
+              :value="$t('checkout.submit')" />
           </fieldset>
         </form>
       </div>
@@ -57,10 +67,14 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
 import { useCartStore } from '../stores/cart';
 const cartStore = useCartStore();
-
+const isCheckedDelivery = ref(false);
+let checkoutModal = null;
+onMounted(() => {
+  checkoutModal = new window.bootstrap.Modal(document.getElementById("checkoutModal"));
+});
 // Form steps configuration
 const steps = [
   { title: 'checkout.personalDetails' },
@@ -98,20 +112,22 @@ const prevStep = () => {
 const submitForm = () => {
 
 
-  let message = "Customer Name \t " + formData.name + " \n Address \t  " + formData.address+"\n";
-  message += "Product\t \tPrice\n -------\t \t-----\n";
+  let message = "اسم الزبون \t " + formData.name + " \n العنوان \t  " + formData.address + "\n";
+  message += isCheckedDelivery.value ? " اضافة خدمة التوصيل \n" : "";
+  message += "الموديل\t \السعر\n -------\t \t-----\n";
 
   cartStore.items.forEach(item => {
     message += `${item.name + "(" + item.id + ")"}\t \t${item.price * item.quantity}\n`;
   });
 
-  message += "Total \t " + cartStore.totalCost + "\n items count \t " + cartStore.totalItems;
+  message += "إجمالي \t " + cartStore.totalCost + "\n العدد   \t " + cartStore.totalItems;
 
-const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
 
   const encodedMessage = encodeURIComponent(message);
 
   cartStore.clearCart()
+  checkoutModal.hide()
   window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
 }
 </script>

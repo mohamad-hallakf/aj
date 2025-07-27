@@ -9,7 +9,7 @@
         <label class="form-label mb-1">{{ $t('products.category') }}</label>
         <select v-model="selectedCategory" class="form-select">
           <option value="">{{ $t('products.allCategories') }}</option>
-          <option v-for="cat in categories" :key="cat.id" :value="cat.id">{{ cat.name }}</option>
+          <option v-for="cat in categories" :key="cat.id" :value="cat.name">{{ cat.name }}</option>
         </select>
       </div>
       <div class="col-md-4 mb-sm-0 mb-3">
@@ -49,11 +49,14 @@
 
 <script setup>
 import { ref, computed, useTemplateRef, onMounted, watch } from 'vue';
-import productsData from '@/data/products.json';
 import categoriesData from '@/data/categories.json';
 import ProductCard from '@/components/ProductCard.vue';
 import ProductGallery from "@/components/ProductGallery.vue";
 import { useRoute } from 'vue-router'
+import { useProductsStore } from '@/stores/products';
+
+const productsStore = useProductsStore();
+const products = computed(() => productsStore.products);
 
 const route = useRoute()
 const productGallery = useTemplateRef('product-gallery')
@@ -62,7 +65,6 @@ function openProductModal(product) {
   productGallery.value.openProductModal(product);
 }
 
-const products = ref(productsData);
 const categories = ref(categoriesData);
 const search = ref(route.query.search ?? '');
 const selectedCategory = ref(route.query.categoryId ?? '');
@@ -75,8 +77,8 @@ const pageSize = 8;
 const filteredProducts = computed(() => {
   return products.value.filter(product => {
 
-    const matchesSearch = product.name.toLowerCase().includes(search.value.toLowerCase()) ||  product.category.name.toLowerCase().includes(search.value.toLowerCase()) ;
-    const matchesCategory = !selectedCategory.value || product.category.id == selectedCategory.value;
+    const matchesSearch = product.name.toLowerCase().includes(search.value.toLowerCase()) ||  product.name.toLowerCase().includes(search.value.toLowerCase()) ;
+    const matchesCategory = !selectedCategory.value || product.category == selectedCategory.value;
     const matchesMin = !minPrice.value || product.price >= minPrice.value;
     const matchesMax = !maxPrice.value || product.price <= maxPrice.value;
     return matchesSearch && matchesCategory && matchesMin && matchesMax;

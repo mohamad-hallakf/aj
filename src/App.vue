@@ -3,7 +3,9 @@ import MainHeader from './components/Header.vue'
 import MainFooter from './components/Footer.vue'
 import QuickAction from './components/QuickAction.vue'
 import Cart from './components/Cart.vue'
+import { useProductsStore } from '@/stores/products';
 
+const productsStore = useProductsStore();
 
 </script>
 
@@ -14,6 +16,9 @@ import Cart from './components/Cart.vue'
     <router-view />
     <Cart />
     <MainFooter />
+    <div  v-if="productsStore.isLoading"  class="loader-overlay">
+      <div class="loader"></div>
+    </div>
   </main>
 </template>
 

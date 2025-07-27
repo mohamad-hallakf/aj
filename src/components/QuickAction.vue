@@ -4,7 +4,7 @@
             <div id="main-button" class="wave">
                 <i class="bx  bx-grid-alt "></i>
             </div>
-            <button @click="makeCall"><i class="bx bx-phone"></i> {{ $t('quickActions.callUs') }}</button>
+            <button @click="makeCall"><span><i class="bx bx-phone"></i> {{ $t('quickActions.callUs') }}</span></button>
             <a id="quick-cart"><i class="bx bx-cart"></i></a>
             <a target="_blank" :href="'https://wa.me/' + whatsappNumber + '?text=مرحيا أريد المساعدة'"
                 title="contact us on whatsapp"><i class="bx bxl-whatsapp"></i></a>

@@ -7,7 +7,7 @@
     <div class="cart__container">
       <article class="cart__card" v-for="item in cartItems" :key="item.id">
         <div class="cart__box">
-          <img :src="getImage(item.img)" alt="" class="cart__img">
+          <img   :src="item.gallery[0]?? '/src/assets/img/logo.png'"  alt="" class="cart__img">
         </div>
 
         <div class="cart__details">

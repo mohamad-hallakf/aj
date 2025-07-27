@@ -19,6 +19,23 @@ app.use(i18n);
 app.use(Toast, {
   duration: 3000,
 });
+
+// main.js or a directives file
+const clickOutside = {
+  beforeMount(el, binding) {
+    el.clickOutsideEvent = function(event) {
+      if (!(el === event.target || el.contains(event.target))) {
+        binding.value(event);
+      }
+    };
+    document.addEventListener('click', el.clickOutsideEvent);
+  },
+  unmounted(el) {
+    document.removeEventListener('click', el.clickOutsideEvent);
+  }
+};
+
+app.directive('click-outside', clickOutside);
 app.mount('#app');
 
 // Register service worker for PWA

@@ -24,7 +24,7 @@
                         </div>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" v-for="(img, idx) in selectedProduct.gallery" :key="idx">
-                                <img :src="getImage(img)" :alt="selectedProduct.name"
+                                <img :src="img" :alt="selectedProduct.name"
                                     style="width:100%;border-radius:10px;" />
                             </div>
                         </div>
@@ -53,10 +53,7 @@ let swiperInstance = null;
 function addToCart() {
     cartStore.addItem(selectedProduct.value,toast)
 }
-function getImage(fileName) {
-    return new URL(`../assets/img/${fileName}`, import.meta.url).href
-}
-
+ 
 function openProductModal(product) {
     selectedProduct.value = product;
     nextTick(() => {

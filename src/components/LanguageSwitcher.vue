@@ -1,9 +1,10 @@
 <template>
-  <div class="language-switcher">
-    <select v-model="currentLocale" @change="changeLanguage" class="form-select form-select-sm">
-      <option value="en">English</option>
-      <option value="ar">العربية</option>
-    </select>
+  <div class="language-switcher"  @click="toggleDropdown">
+      <i class="bx bx-world change-lang"  ></i>
+    <ul v-if="isDropdownOpen" class="language-dropdown">
+      <li @click="changeLanguage('en')">English</li>
+      <li @click="changeLanguage('ar')">العربية</li>
+    </ul>
   </div>
 </template>
 
@@ -13,12 +14,18 @@ import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n({ useScope: 'global' })
 const currentLocale = ref(locale.value)
+const isDropdownOpen = ref(false)
 
-const changeLanguage = () => {
-  locale.value = currentLocale.value
-  document.documentElement.dir = currentLocale.value === 'ar' ? 'rtl' : 'ltr'
-  document.documentElement.lang = currentLocale.value
-  localStorage.setItem('preferred-language', currentLocale.value)
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value
+}
+
+const changeLanguage = (lang) => {
+  currentLocale.value = lang
+  locale.value = lang
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'
+  document.documentElement.lang = lang
+  localStorage.setItem('preferred-language', lang)
 }
 
 onMounted(() => {
@@ -32,16 +39,12 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
-.language-switcher {
-  display: inline-block;
-}
+<style scoped> 
 
-.form-select {
-  min-width: 100px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 4px 8px;
-  font-size: 14px;
+.nav__link{
+  font-size: 1.25rem;
+}
+.nav__link i{
+  padding-top: 4px;
 }
 </style>
